@@ -1,0 +1,169 @@
+{% import 'macros/form.html' as f with context %}
+
+{% if request.endpoint.endswith('new') %}
+  {% set endpoint = 'admin.users_new' %}
+  {% set form_kwargs = {} %}
+  {% set legend = 'Add a new user' %}
+  {% set button = 'Add' %}
+{% else %}
+  {% set endpoint = 'admin.users_edit' %}
+  {% set form_kwargs = {'id': user.id} %}
+  {% set legend = 'Update this user' %}
+  {% set button = 'Save' %}
+{% endif %}
+
+<div class="row">
+  <div class="col-md-6">
+    <h2>{{ legend }}</h2>
+  </div>
+  <div class="col-md-6">
+    <table class="pull-right">
+      <td>
+        <a class="btn btn-sm btn-info" href="{{ url_for('admin.service_list', user_id=user.id) }}"><i class="fa fa-fw fa-cogs"></i>Services</a>
+        <a class="btn btn-sm btn-success" href="{{ url_for('admin.payments', user_id=user.id) }}"><i class="fa fa-fw fa-credit-card"></i>Payments</a>
+        <a class="btn btn-sm btn-warning" href="{{ url_for('admin.client_list', id=user.id)}}"><i class="fa fa-fw fa-users"></i>Clients</a>
+      </td>
+    </table>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8 card card-block">
+    {% call f.form_tag(endpoint, **form_kwargs) %}
+      {% call f.form_group(form.region, css_class='sm-margin-bottom') %}
+      {% endcall %}
+      {% call f.form_group(form.username, css_class='sm-margin-bottom',
+                            autofocus='autofocus') %}
+      {% endcall %}
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#EN_title">EN</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#RU_title">RU</a>
+        </li>
+      </ul>
+      <div class="tab-content">
+          <div class="tab-pane container active" id="EN_title" class="tab-pane fade in active">
+            {% call f.form_group(form.company_name, css_class='sm-margin-bottom') %}
+            {% endcall %}
+          </div>
+          <div class="tab-pane container fade" id="RU_title" class="tab-pane fade">
+            {% call f.form_group(form.company_name_ru, css_class='sm-margin-bottom') %}
+            {% endcall %}
+          </div>
+      </div>
+      {% call f.form_group(form.telephone, css_class='sm-margin-bottom') %}
+      {% endcall %}
+
+      {% call f.form_group(form.telephone_2, css_class='sm-margin-bottom') %}
+      {% endcall %}
+
+      {% call f.form_group(form.telephone_3, css_class='sm-margin-bottom') %}
+      {% endcall %}
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#EN_desc">EN</a>
+        </li>
+        <li>
+          <a class="nav-link" data-toggle="tab" href="#RU_desc">RU</a>
+        </li>
+      </ul>
+      <div class="tab-content">
+          <div class="tab-pane container active" id="EN_desc" class="tab-pane fade in active">
+            {% call f.form_group(form.description, css_class='sm-margin-bottom') %}
+            {% endcall %}
+          </div>
+          <div class="tab-pane container fade" id="RU_desc" class="tab-pane fade">
+            {% call f.form_group(form.description_ru, css_class='sm-margin-bottom') %}
+            {% endcall %}
+          </div>
+      </div>
+      {% call f.form_group(form.role, css_class='sm-margin-bottom') %}
+      {% endcall %}
+
+      {% call f.form_group(form.category, css_class='sm-margin-bottom') %}
+      {% endcall %}
+
+      {% call f.form_group(form.confirmed) %}
+      {% endcall %}
+
+      {% call f.form_group(form.active) %}
+      {% endcall %}
+      <hr/>
+      <div class="row" style="margin-bottom: 10px">
+        <div class="col-md-6">
+          <button type="submit" class="btn btn-success btn-block">
+            {{ button }}
+          </button>
+        </div>
+        <div class="col-md-6">
+          <div class="visible-xs visible-sm"></div>
+          <a href="{{ url_for('admin.users') }}"
+              class="btn btn-warning btn-block">
+            Cancel
+          </a>
+        </div>
+      </div>
+        <div class="form-group">
+        <div class="visible-xs visible-sm"></div>
+          <a href="{{ url_for('admin.users_uploads', id = user.id) }}"
+              class="btn btn-info btn-block">
+            <i class="fa fa-fw fa-upload "></i>Upload Photos
+          </a>
+      </div>
+    {% endcall %}
+  </div>
+  <div class="col-md-4 card card-block">
+    <h3>Login activity</h3>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <dl>
+          <dt>Sign in count</dt>
+          <dd class="sm-margin-bottom">{{ user.sign_in_count }}</dd>
+          <dt>Current sign in date</dt>
+          <dd class="sm-margin-bottom">
+            {% if user.current_sign_in_on %}
+              <time class="from-now"
+                    data-datetime="{{ user.current_sign_in_on }}">
+                {{ user.current_sign_in_on }}
+              </time>
+            {% endif %}
+          </dd>
+          <dt>Current sign in IP address</dt>
+          <dd class="sm-margin-bottom">{{ user.current_sign_in_ip }}</dd>
+          <dt>Previous sign in date</dt>
+          <dd class="sm-margin-bottom">
+            {% if user.last_sign_in_on %}
+              <time class="from-now"
+                    data-datetime="{{ user.last_sign_in_on }}">
+                {{ user.last_sign_in_on }}
+              </time>
+            {% endif %}
+          </dd>
+          <dt>Previous sign in IP address</dt>
+          <dd>{{ user.last_sign_in_ip }}</dd>
+        </dl>
+      </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label"><strong>Registered</strong></label>
+        <p class="sm-margin-bottom form-control-static">
+          <time class="from-now" data-datetime="{{ user.created_on }}">
+            {{ user.created_on }}
+          </time>
+        </p>
+      </div>
+      <div class="form-group">
+        <label class="control-label"><strong>E-mail address</strong></label>
+        <p class="sm-margin-bottom form-control-static">
+          {{ user.email }}
+        </p>
+      </div>
+      <div class="form-group">
+        <label class="control-label"><strong>Weddings Organized</strong></label>
+        <p class="sm-margin-bottom form-control-static">
+          {{ user.wedding_count }}
+        </p>
+      </div>
+  </div>
+</div>

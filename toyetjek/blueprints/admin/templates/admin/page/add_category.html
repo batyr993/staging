@@ -1,0 +1,31 @@
+{% extends 'layouts/app.html' %}
+{% import 'macros/form.html' as f with context %}
+
+{% block title %}Add New category{% endblock %}
+
+{% block body %}
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4 card card-block bg-faded d-block mx-auto">
+      {% call f.form_tag('admin.add_category') %}
+        <legend>Add a New Category</legend>
+
+        {% call f.form_group(form.category_name, css_class='sm-margin-bottom') %}
+        {% endcall %}
+
+        {% call f.form_group(form.photo, css_class='sm-margin-bottom') %}
+        {% endcall %}
+
+        <div class="row">
+          <div class="col-md-6">
+            <button type="submit" class="btn btn-success btn-block">
+              Save
+            </button>
+          </div>
+          <div class="col-md-6">
+            <a class="btn btn-warning" href="{{url_for('admin.categories')}}">Back</a>
+          </div>
+        </div>
+      {% endcall %}
+    </div>
+  </div>
+{% endblock %}

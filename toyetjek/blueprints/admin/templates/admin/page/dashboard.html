@@ -1,0 +1,266 @@
+{% extends 'layouts/app.html' %}
+
+{% block title %}Admin - Dashboard{% endblock %}
+
+{% if user_total[0] == None %}
+  {% set user_total = 0 %}
+{% else %}
+  {% set user_total = user_total[0] %}
+{% endif %}
+{% if client_total[0] == None %}
+  {% set client_total = 0 %}
+{% else %}
+  {% set client_total = client_total[0] %}
+{% endif %}
+{% if invitation_total[0] == None %}
+  {% set invitation_total = 0 %}
+{% else %}
+  {% set invitation_total = invitation_total[0] %}
+{% endif %}
+
+{% if dz_user_total[0] == None %}
+  {% set dz_user_total = 0 %}
+{% else %}
+  {% set dz_user_total = dz_user_total[0] %}
+{% endif %}
+{% if dz_client_total[0] == None %}
+  {% set dz_client_total = 0 %}
+{% else %}
+  {% set dz_client_total = dz_client_total[0] %}
+{% endif %}
+{% if dz_invitation_total[0] == None %}
+  {% set dz_invitation_total = 0 %}
+{% else %}
+  {% set dz_invitation_total = dz_invitation_total[0] %}
+{% endif %}
+
+{% if bn_user_total[0] == None %}
+  {% set bn_user_total = 0 %}
+{% else %}
+  {% set bn_user_total = bn_user_total[0] %}
+{% endif %}
+{% if bn_client_total[0] == None %}
+  {% set bn_client_total = 0 %}
+{% else %}
+  {% set bn_client_total = bn_client_total[0] %}
+{% endif %}
+{% if bn_invitation_total[0] == None %}
+  {% set bn_invitation_total = 0 %}
+{% else %}
+  {% set bn_invitation_total = bn_invitation_total[0] %}
+{% endif %}
+
+{% block body %}
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <a href="{{ url_for('admin.users') }}">Users</a>
+          <span class="pull-right text-muted">
+            {{ group_and_count_users.total }}
+          </span>
+        </div>
+        <div class="card-body">
+          {% for item in group_and_count_users.query %}
+            {% set percent = ((item[0] / group_and_count_users.total) * 100) | round %}
+            <h5>
+              {{ item[1] | title }}
+              <span class="text-muted">({{ item[0] }})</span>
+            </h5>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-success" role="progressbar"
+                   aria-valuenow="{{ percent }}" aria-valuemin="0"
+                   aria-valuemax="100" style="width: {{ percent }}%;">
+                {{ percent }}%
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <a href="{{ url_for('admin.clients') }}">Clients</a>
+          <span class="pull-right text-muted">
+            {{ group_and_count_clients.total }}
+          </span>
+        </div>
+        <div class="card-body">
+          {% for item in group_and_count_clients.query %}
+            {% set percent = ((item[0] / group_and_count_clients.total) * 100) | round %}
+            <h5>
+              {{ item[1] | title }}
+              <span class="text-muted">({{ item[0] }})</span>
+            </h5>
+            <div class="progress">
+              <div class="progress-bar-striped bg-warning" role="progressbar"
+                   aria-valuenow="{{ percent }}" aria-valuemin="0"
+                   aria-valuemax="100" style="width: {{ percent }}%;">
+                {{ percent }}%
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <a href="{{ url_for('admin.invitations') }}">Invitations</a>
+          <span class="pull-right text-muted">
+            {{ group_and_count_invitations.total }}
+          </span>
+        </div>
+        <div class="card-body">
+          {% for item in group_and_count_invitations.query %}
+            {% set percent = ((item[0] / group_and_count_invitations.total) * 100) | round %}
+            <h5>
+              {{ item[1] | title }}
+              <span class="text-muted">({{ item[0] }})</span>
+            </h5>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-info" role="progressbar"
+                   aria-valuenow="{{ percent }}" aria-valuemin="0"
+                   aria-valuemax="100" style="width: {{ percent }}%;">
+                {{ percent }}%
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <!-- Ashgabat region -->
+ 
+  <div class="row lg-margin-top">
+    <div class="col-md-12">
+      <h3 class="text-center">Ashgabat</h3>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <a href="{{ url_for('admin.users') }}">Partner Payments</a>
+        </div>
+        <div class="card-body">
+            <h5>
+              <span class="text-muted">{{ user_total }} DTM</span>
+            </h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <a href="{{ url_for('admin.users') }}">Client Payments</a>
+        </div>
+        <div class="card-body">
+            <h5>
+              <span class="text-muted">{{ client_total }} DTM</span>
+            </h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <a href="{{ url_for('admin.users') }}">Invitation Payments</a>
+        </div>
+        <div class="card-body">
+            <h5>
+              <span class="text-muted">{{ invitation_total }} DTM</span>
+            </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <!-- Dashoguz region -->
+
+  <div class="row lg-margin-top">
+    <div class="col-md-12">
+      <h3 class="text-center">Dashoguz</h3>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <a href="{{ url_for('admin.users') }}">Partner Payments</a>
+        </div>
+        <div class="card-body">
+            <h5>
+              <span class="text-muted">{{ dz_user_total }} DTM</span>
+            </h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <a href="{{ url_for('admin.clients') }}">Client Payments</a>
+        </div>
+        <div class="card-body">
+            <h5>
+              <span class="text-muted">{{ dz_client_total }} DTM</span>
+            </h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <a href="{{ url_for('admin.users') }}">Invitation Payments</a>
+        </div>
+        <div class="card-body">
+            <h5>
+              <span class="text-muted">{{ dz_invitation_total }} DTM</span>
+            </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <!-- Balkanabat region -->
+
+  <div class="row lg-margin-top">
+    <div class="col-md-12">
+      <h3 class="text-center">Balkanabat</h3>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <a href="{{ url_for('admin.users') }}">Partner Payments</a>
+        </div>
+        <div class="card-body">
+            <h5>
+              <span class="text-muted">{{ bn_user_total }} DTM</span>
+            </h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <a href="{{ url_for('admin.clients') }}">Client Payments</a>
+        </div>
+        <div class="card-body">
+            <h5>
+              <span class="text-muted">{{ bn_client_total }} DTM</span>
+            </h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <a href="{{ url_for('admin.users') }}">Invitation Payments</a>
+        </div>
+        <div class="card-body">
+            <h5>
+              <span class="text-muted">{{ bn_invitation_total }} DTM</span>
+            </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,81 @@
+{% import 'macros/form.html' as f with context %}
+
+{% if request.endpoint.endswith('new') %}
+  {% set endpoint = 'admin.clients_new' %}
+  {% set form_kwargs = {} %}
+  {% set legend = 'Add a new client' %}
+  {% set button = 'Add' %}
+{% else %}
+  {% set endpoint = 'admin.clients_edit' %}
+  {% set form_kwargs = {'id': client.id} %}
+  {% set legend = 'Update this Client' %}
+  {% set button = 'Save' %}
+{% endif %}
+
+<div class="row">
+  <div class="col-md-6">
+    <h2>{{ legend }}</h2>
+  </div>
+  <div class="col-md-6">
+    <table class="pull-right">
+      <td>
+        <a class="btn btn-sm btn-success" href="{{url_for('admin.client_payments', client_id=client.id)}}"><i class="fa fa-fw fa-credit-card"></i>Payments</a>
+      </td>
+    </table>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12 card card-block">
+    {% call f.form_tag(endpoint, **form_kwargs) %}
+      {% call f.form_group(form.region, css_class='sm-margin-bottom') %}
+      {% endcall %}
+      
+      {% call f.form_group(form.name, css_class='sm-margin-bottom',
+                            autofocus='autofocus') %}
+      {% endcall %}
+
+      {% call f.form_group(form.lastname, css_class='sm-margin-bottom') %}
+      {% endcall %}
+
+      {% call f.form_group(form.nickname, css_class='sm-margin-bottom') %}
+      {% endcall %}
+
+      {% call f.form_group(form.telephone1, css_class='sm-margin-bottom') %}
+      {% endcall %}
+
+      {% call f.form_group(form.telephone2, css_class='sm-margin-bottom') %}
+      {% endcall %}
+
+      {% call f.form_group(form.address, css_class='sm-margin-bottom') %}
+      {% endcall %}
+
+      {% call f.form_group(form.wedding_date, css_class='sm-margin-bottom') %}
+      {% endcall %}
+
+      {% call f.form_group(form.wedding_details, css_class='sm-margin-bottom') %}
+      {% endcall %}
+
+      {% call f.form_group(form.status, css_class='sm-margin-bottom') %}
+      {% endcall %}
+
+      {% call f.form_group(form.confirmed) %}
+      {% endcall %}
+      <hr/>
+      <div class="row" style="margin-bottom: 10px">
+        <div class="col-md-6">
+          <button type="submit" class="btn btn-success btn-block">
+            {{ button }}
+          </button>
+        </div>
+        <div class="col-md-6">
+          <div class="visible-xs visible-sm"></div>
+          <a href="{{ url_for('admin.clients') }}"
+              class="btn btn-warning btn-block">
+            Cancel
+          </a>
+        </div>
+      </div>
+    {% endcall %}
+  </div>
+  </div>
+</div>

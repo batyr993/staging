@@ -1,0 +1,67 @@
+{% extends 'layouts/base.html' %}
+
+{% block header %}
+  <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="{{ url_for('page.home') }}"><img src="{{ url_for('static', filename='images/toyetjek.png') }}" width="190" height="50"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            {% if current_user.role == 'admin' %}
+              {% include 'admin/_menu.html' %}
+            {% else %}
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ url_for('page.home') }}">{{_('Home')}}
+              <span class="sr-only">(current)</span>
+            </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('page.about') }}">{{ _('About') }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('client.index') }}">{{ _('Organize Wedding') }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('page.services') }}">{{ _('Wedding Services') }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('invitation.register') }}">{{ _('e-Invitations') }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('contact.index') }}">{{ _('Contact') }}</a>
+            </li>
+          {% endif %}
+            {% if current_user.is_authenticated and current_user.confirmed %}
+              <li class="nav-item dropdown">
+                <a href="#" id="navbarDropdownAccount" class="nav-link dropdown-toggle"
+                   data-toggle="dropdown"
+                   aria-haspopup="true"
+                   aria-expanded="false">{{ _('Account') }}</a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownAccount">
+                  <a class="dropdown-item" href="{{ url_for('user.settings') }}"><i class="fa fa-fw fa-cogs"></i> {{ _('Settings') }}</a>
+                  {% if current_user.role == 'partner' %}
+                    <a class="dropdown-item" href="{{ url_for('client.client_list') }}"><i class="fa fa-fw fa-users"></i> {{ _('Clients') }} <span class="badge badge-success"><i class="fa fa-fw fa-check"></i></span> </a>
+                    <a class="dropdown-item" href="{{ url_for('client.assigned_clients', id=current_user.id) }}"><i class="fa fa-fw fa-shield"></i> {{ _('My Clients') }} <span class="badge badge-warning">{{ current_user.clients|length }}</span> </a>
+                  {% endif %}
+                  <a class="dropdown-item" href="{{ url_for('user.logout') }}"><i class="fa fa-fw fa-sign-out"></i> {{ _('Log out') }}</a>
+                </div>
+              </li>
+            {% else %}
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('user.login') }}"><i class="fa fa-fw fa-sign-in"></i> {{ _('Log in') }}</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ url_for('user.signup') }}"><i class="fa fa-fw fa-user-plus"></i> {{ _('Sign up') }}</a></li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </nav>
+{% endblock %}
+
+{% block footer %}
+    <li><a href="{{ url_for('contact.index') }}">{{ _('Contact') }}</a></li>
+    <li><a href="{{ url_for('page.privacy') }}">{{ _('Privacy Policy') }}</a></li>
+    <li><a href="{{ url_for('page.terms') }}">{{ _('Terms of Service') }}</a></li>
+    <li><a href="{{ url_for('feedback.index') }}">{{ _('Feedback') }}</a></li>
+{% endblock %}

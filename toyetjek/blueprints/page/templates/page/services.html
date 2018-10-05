@@ -1,0 +1,20 @@
+{% extends 'layouts/app.html' %}
+
+{% block title %}{{ _('Wedding Services') }}{% endblock %}
+{% block heading %}<h2 class="text-center">{{ _('Wedding Services') }}</h2>{% endblock %}
+
+{% block body %}
+    <div class="row">
+      {% for category in categories %}
+      <div class="col-lg-3 col-md-4 col-sm-6" style="margin-bottom:30px">
+        <div class="card">
+          <img class="card-img-top img-responsive" src="{{ url_for('static', filename='images/categories/' + category.image)}}" alt="{{ category.category_name }}">
+          <div class="card-body">
+            <h4 class="card-title">{{ category.category_name }}</h4>
+            <a href="{{ url_for('page.service', category_name = category.category_name) }}" class="btn btn-info">{{ _('See more') }}</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,7 @@
+{% macro role_icon_for(invitation) -%}
+  {% if invitation.confirmed == True %}
+    <i class="fa fa-3x fa-fw fa-calendar-check-o" title="Pending"></i>
+  {% else %}
+    <i class="fa fa-3x fa-fw fa-calendar-times-o text-muted" title="Cancelled"></i>
+  {% endif %}
+{% endmacro %}

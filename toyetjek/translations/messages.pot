@@ -1,0 +1,1401 @@
+# Translations template for PROJECT.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-09-04 10:55+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: toyetjek/blueprints/admin/templates/admin/_menu.html:1
+msgid "Dashboard"
+msgstr ""
+
+#: toyetjek/blueprints/admin/templates/admin/_menu.html:3
+msgid "Users"
+msgstr ""
+
+#: toyetjek/blueprints/admin/templates/admin/_menu.html:4
+#: toyetjek/blueprints/client/templates/client/client_list.html:9
+#: toyetjek/templates/layouts/app.html:46
+msgid "Clients"
+msgstr ""
+
+#: toyetjek/blueprints/admin/templates/admin/_menu.html:5
+msgid "Categories"
+msgstr ""
+
+#: toyetjek/blueprints/admin/templates/admin/_menu.html:6
+msgid "Invitations"
+msgstr ""
+
+#: toyetjek/blueprints/client/forms.py:10
+#: toyetjek/blueprints/invitation/forms.py:21
+#: toyetjek/blueprints/user/forms.py:52
+msgid "Region"
+msgstr ""
+
+#: toyetjek/blueprints/client/forms.py:13
+#: toyetjek/blueprints/client/templates/client/assigned_clients.html:16
+#: toyetjek/blueprints/client/templates/client/client_list.html:19
+msgid "Name"
+msgstr ""
+
+#: toyetjek/blueprints/client/forms.py:14
+#: toyetjek/blueprints/client/templates/client/assigned_clients.html:19
+#: toyetjek/blueprints/client/templates/client/client_list.html:22
+msgid "Lastname"
+msgstr ""
+
+#: toyetjek/blueprints/client/forms.py:15
+#: toyetjek/blueprints/invitation/forms.py:17
+msgid "Telephone"
+msgstr ""
+
+#: toyetjek/blueprints/client/forms.py:16
+#: toyetjek/blueprints/client/templates/client/client_list.html:31
+#: toyetjek/blueprints/invitation/forms.py:20
+msgid "Wedding Date"
+msgstr ""
+
+#: toyetjek/blueprints/client/models.py:58
+#: toyetjek/blueprints/invitation/models.py:21
+#: toyetjek/blueprints/user/models.py:89
+msgid "Ashgabat"
+msgstr ""
+
+#: toyetjek/blueprints/client/models.py:59
+#: toyetjek/blueprints/invitation/models.py:22
+#: toyetjek/blueprints/user/models.py:90
+msgid "Dashoguz"
+msgstr ""
+
+#: toyetjek/blueprints/client/views.py:27
+msgid "Thanks! toyetjek Team will contact you ASAP!"
+msgstr ""
+
+#: toyetjek/blueprints/client/templates/client/apply.html:4
+msgid "Save the Date for wedding"
+msgstr ""
+
+#: toyetjek/blueprints/client/templates/client/apply.html:9
+msgid "Organizing Wedding Made Easy"
+msgstr ""
+
+#: toyetjek/blueprints/client/templates/client/apply.html:16
+msgid "Wedding Agent"
+msgstr ""
+
+#: toyetjek/blueprints/client/templates/client/apply.html:18
+msgid "Our wedding agent will contact you ASAP"
+msgstr ""
+
+#: toyetjek/blueprints/client/templates/client/apply.html:27
+msgid "Visit our Showroom"
+msgstr ""
+
+#: toyetjek/blueprints/client/templates/client/apply.html:29
+msgid "Choose your own Wedding Service"
+msgstr ""
+
+#: toyetjek/blueprints/client/templates/client/apply.html:38
+msgid "Spend Less Time"
+msgstr ""
+
+#: toyetjek/blueprints/client/templates/client/apply.html:40
+msgid "We do the organization job for you"
+msgstr ""
+
+#: toyetjek/blueprints/client/templates/client/apply.html:47
+msgid "Register today"
+msgstr ""
+
+#: toyetjek/blueprints/client/templates/client/apply.html:65
+#: toyetjek/blueprints/user/templates/user/login.html:32
+#: toyetjek/blueprints/user/templates/user/signup.html:82
+msgid "Register"
+msgstr ""
+
+#: toyetjek/blueprints/client/templates/client/apply.html:72
+msgid "Cancel"
+msgstr ""
+
+#: toyetjek/blueprints/client/templates/client/assigned_clients.html:6
+#: toyetjek/templates/layouts/app.html:47
+msgid "My Clients"
+msgstr ""
+
+#: toyetjek/blueprints/client/templates/client/assigned_clients.html:22
+#: toyetjek/blueprints/client/templates/client/client_list.html:25
+msgid "Address"
+msgstr ""
+
+#: toyetjek/blueprints/client/templates/client/assigned_clients.html:25
+msgid "Details"
+msgstr ""
+
+#: toyetjek/blueprints/client/templates/client/assigned_clients.html:28
+msgid "Date"
+msgstr ""
+
+#: toyetjek/blueprints/client/templates/client/client_list.html:28
+msgid "Wedding Details"
+msgstr ""
+
+#: toyetjek/blueprints/contact/forms.py:9
+msgid "What's your e-mail address?"
+msgstr ""
+
+#: toyetjek/blueprints/contact/forms.py:11
+msgid "What's your question or issue?"
+msgstr ""
+
+#: toyetjek/blueprints/contact/templates/contact/index.html:4
+msgid "Contact us with your feedback or issues"
+msgstr ""
+
+#: toyetjek/blueprints/contact/templates/contact/index.html:5
+msgid ""
+"Contact our customer service department with any\n"
+"questions or concerns."
+msgstr ""
+
+#: toyetjek/blueprints/contact/templates/contact/index.html:12
+msgid "We're here to answer your questions"
+msgstr ""
+
+#: toyetjek/blueprints/contact/templates/contact/index.html:23
+msgid "Send e-mail"
+msgstr ""
+
+#: toyetjek/blueprints/invitation/forms.py:16
+msgid "Groom & Bride"
+msgstr ""
+
+#: toyetjek/blueprints/invitation/forms.py:18
+msgid "Wedding Place"
+msgstr ""
+
+#: toyetjek/blueprints/invitation/forms.py:19
+msgid "Wedding Time"
+msgstr ""
+
+#: toyetjek/blueprints/invitation/views.py:31
+msgid "One step left, please visit our office to pay 100 DTM fee"
+msgstr ""
+
+#: toyetjek/blueprints/invitation/templates/invitation/einvitation.html:37
+msgid "Date:"
+msgstr ""
+
+#: toyetjek/blueprints/invitation/templates/invitation/einvitation.html:38
+msgid "Time:"
+msgstr ""
+
+#: toyetjek/blueprints/invitation/templates/invitation/einvitation.html:45
+#: toyetjek/blueprints/invitation/templates/invitation/einvitation.html:60
+#: toyetjek/templates/layouts/app.html:17
+msgid "Home"
+msgstr ""
+
+#: toyetjek/blueprints/invitation/templates/invitation/einvitation.html:46
+#: toyetjek/blueprints/invitation/templates/invitation/einvitation.html:61
+#: toyetjek/blueprints/page/templates/page/privacy.html:3
+#: toyetjek/blueprints/page/templates/page/privacy.html:4
+#: toyetjek/templates/layouts/app.html:64
+#: toyetjek/templates/layouts/base.html:59
+msgid "Privacy Policy"
+msgstr ""
+
+#: toyetjek/blueprints/invitation/templates/invitation/einvitation.html:47
+#: toyetjek/blueprints/invitation/templates/invitation/einvitation.html:62
+#: toyetjek/blueprints/page/templates/page/terms.html:3
+#: toyetjek/blueprints/page/templates/page/terms.html:4
+#: toyetjek/templates/layouts/app.html:65
+#: toyetjek/templates/layouts/base.html:60
+msgid "Terms of Service"
+msgstr ""
+
+#: toyetjek/blueprints/invitation/templates/invitation/einvitation.html:49
+#: toyetjek/blueprints/invitation/templates/invitation/einvitation.html:64
+#: toyetjek/templates/layouts/app.html:66
+#: toyetjek/templates/layouts/base.html:61
+msgid "Feedback"
+msgstr ""
+
+#: toyetjek/blueprints/invitation/templates/invitation/einvitation.html:56
+msgid "Please come to our office to pay the Fee or contact our wedding agent"
+msgstr ""
+
+#: toyetjek/blueprints/invitation/templates/invitation/register.html:8
+msgid "Share your wedding with the World!"
+msgstr ""
+
+#: toyetjek/blueprints/invitation/templates/invitation/register.html:15
+msgid "Share your e-invitation on social networks"
+msgstr ""
+
+#: toyetjek/blueprints/invitation/templates/invitation/register.html:17
+msgid "Let your friends see your wedding date"
+msgstr ""
+
+#: toyetjek/blueprints/invitation/templates/invitation/register.html:22
+msgid "Register for an e-Invitation"
+msgstr ""
+
+#: toyetjek/blueprints/invitation/templates/invitation/register.html:46
+msgid "Place an Order"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/about.html:3
+#: toyetjek/templates/layouts/app.html:22
+msgid "About"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/about.html:12
+msgid "About us"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/about.html:13
+msgid "toyetjek.com is the"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/about.html:13
+msgid "1st and the only wedding portal in Turkmenistan."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/about.html:13
+msgid "The idea was initially set by"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/about.html:13
+msgid "and"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/about.html:13
+msgid ""
+"the founders of toyetjek.com in November of year 2017. The idea is to "
+"simplify the wedding process of couples who have a hard time in "
+"organizing and planning a wedding of their dream. Toyetjek.com gathers "
+"all the wedding services that are available in Turkmenistan and "
+"recommends them to people. Couples can see the wedding services that are "
+"available on web portal or they can visit the showroom which is located "
+"at the 2nd floor of Berkarar Shopping Center. If couples decide to "
+"organize wedding through toyetjek.com we help in finding every single "
+"detail which is needed for a modern wedding. We have a team of wedding "
+"organizers who are ready to help day and night. They will work with you "
+"individually and help with every single detail. Moreover they will teach "
+"you the ethics of how to behave in a wedding."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/about.html:14
+msgid "Electronic Invitation"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/about.html:15
+msgid ""
+"The idea of electronic invitation was designed by Batyr Atamamedov, "
+"e-Invitation contains automatic countdown so that couples can count their"
+" days and make their plans accordingly. Couples can also put their "
+"countdown in a restaurants, so everyone can see and countdown together "
+"for bride and groom to come. e-Invitation can be shared on social "
+"networks like"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/about.html:15
+msgid "facebook, instagram and imo messenger"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/about.html:15
+msgid ""
+"Nowadays we like to share our best moments. The wedding being one of the "
+"most happiest moments of couple's lifes is also a good reason to share "
+"happiness. So we encourage you to spread the word about your wedding so "
+"that people can save the date."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/about.html:16
+msgid ""
+"We are glad that you are using our service and we will work more to make "
+"it better. You can follow us on instagram:"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/about.html:16
+msgid "or you can add us on imo messenger:"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/about.html:17
+msgid "Feel free to contact us anytime!"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/faq.html:4
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/faq.html:7
+msgid "What is the purpose of this website?"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/faq.html:8
+msgid ""
+"The purpose of the website is to provide a space for couples to organize "
+"wedding easily and fast"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/faq.html:9
+msgid "What are the procedures"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/faq.html:10
+msgid ""
+"You provide us your wedding details and needs so our wedding expert is "
+"going to work with you individually"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/faq.html:11
+msgid "I have a wedding service, what should I do?"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/faq.html:12
+msgid ""
+"We are going to recommend and advertise your wedding service to people so"
+" that they know about you"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/home.html:3
+msgid "toyetjek.com | The First Wedding Portal in Turkmenistan"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/home.html:4
+msgid "toyetjek.com is the first and official wedding portal in Turkmenistan"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/home.html:17
+msgid "We are the 1st wedding Portal in Turkmenistan"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/home.html:18
+msgid "Wedding is simplified just for you"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/home.html:24
+msgid "Organize weddings with us"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/home.html:25
+msgid "We have a wedding agent ready to help you!"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/home.html:31
+msgid "If you have a wedding service"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/home.html:32
+msgid "Feel free to join us!"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/home.html:50
+msgid "Organize the wedding with us"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/home.html:52
+msgid "Your Love Story begins here!"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/home.html:58
+msgid "Organize a wedding"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/home.html:59
+msgid "Don't know where to start?"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/home.html:61
+#: toyetjek/blueprints/page/templates/page/home.html:69
+#: toyetjek/blueprints/page/templates/page/home.html:77
+#: toyetjek/templates/layouts/app.html:54
+msgid "Sign up"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/home.html:66
+msgid "Advertise your wedding service"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/home.html:67
+msgid "Want to simplify couples lifes?"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/home.html:74
+msgid "e-Invitation with countdown"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/home.html:75
+msgid "Countdown Wedding Invitation"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/privacy.html:8
+msgid "This privacy policy discloses the privacy practices for"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/privacy.html:12
+msgid ""
+"This privacy policy applies solely to information collected by this web\n"
+"    site. It will notify you of the following:"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/privacy.html:17
+msgid ""
+"What personally identifiable information is collected from you through\n"
+"      the web site, how it is used and with whom it may be shared."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/privacy.html:21
+msgid "What choices are available to you regarding the use of your data."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/privacy.html:24
+msgid ""
+"The security procedures in place to protect the misuse of your "
+"information."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/privacy.html:26
+msgid "How you can correct any inaccuracies in the information."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/privacy.html:31
+msgid "Information collection, use, and sharing"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/privacy.html:33
+msgid ""
+"We are the sole owners of the information collected on this site. We\n"
+"    only have access to/collect information that you voluntarily give us "
+"via\n"
+"    email or other direct contact from you. We will not sell or rent this"
+"\n"
+"    information to anyone."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/privacy.html:39
+msgid ""
+"We will use your information to respond to you, regarding the reason you\n"
+"    contacted us. We will not share your information with any third party"
+"\n"
+"    outside of our organization, other than as necessary to fulfill your\n"
+"    request, e.g. to process a credit card."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/privacy.html:45
+msgid ""
+"Unless you ask us not to, we may contact you via email or telephone in "
+"the future to\n"
+"    tell you about specials, new products or services, or changes to this"
+"\n"
+"    privacy policy."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/privacy.html:52
+msgid "Your access to and control over information"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/privacy.html:54
+msgid ""
+"You may opt out of any future contacts from us at any time. You can do "
+"the\n"
+"    following at any time by contacting us via the email address or phone"
+"\n"
+"    number given on our website:"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/privacy.html:59
+msgid "See what data we have about you, if any."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/privacy.html:60
+msgid "Change/correct any data we have about you."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/privacy.html:61
+msgid "Have us delete any data we have about you."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/privacy.html:62
+msgid "Express any concern you have about our use of your data."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/privacy.html:67
+msgid "Security"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/privacy.html:69
+msgid ""
+"We take precautions to protect your information. When you submit "
+"sensitive\n"
+"    information via the website, your information is protected both "
+"online and\n"
+"    offline."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/privacy.html:74
+msgid ""
+"Wherever we collect sensitive information \"such as credit card data\",\n"
+"    that information is encrypted and transmitted to us in a secure way.\n"
+"    You can verify this by looking for a closed lock icon at the bottom "
+"of your\n"
+"    web browser, or looking for \"https\" at the beginning of the address"
+" of\n"
+"    the web page."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/privacy.html:81
+msgid ""
+"While we use encryption to protect sensitive information transmitted\n"
+"    online, we also protect your information offline. Only employees who\n"
+"    need the information to perform a specific job \"for example, billing"
+" or\n"
+"    customer service\" are granted access to personally identifiable "
+"information.\n"
+"    The computers/servers in which we store personally identifiable "
+"information\n"
+"    are kept in a secure environment."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/privacy.html:90
+msgid "Cookies"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/privacy.html:92
+msgid ""
+"We use 'cookies' on this site. A cookie is a piece of data stored on a\n"
+"    site visitor's hard drive to help us improve your access to our site\n"
+"    and identify repeat visitors to our site. For instance, when we use a"
+"\n"
+"    cookie to identify you, you would not have to log in with a password "
+"more\n"
+"    than once, thereby saving time while on our site. Cookies can also "
+"enable us\n"
+"    to track and target the interests of our users to enhance the "
+"experience\n"
+"    on our site. Usage of a cookie is in no way linked to any personally\n"
+"    identifiable information on our site."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/privacy.html:102
+msgid "If you do not want to be tracked by Google Analytics you may opt-out using"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/privacy.html:104
+msgid "Google's official opt-out browser add-on"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/privacy.html:110
+msgid "Links"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/privacy.html:112
+msgid ""
+"This web site contains links to other sites. Please be aware that we are\n"
+"    not responsible for the content or privacy practices of such other "
+"sites.\n"
+"\n"
+"    We encourage our users to be aware when they leave our site and to "
+"read\n"
+"    the privacy statements of any other site that collects personally\n"
+"    identifiable information."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/privacy.html:122
+msgid "Updates"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/privacy.html:124
+msgid ""
+"Our privacy policy may change from time to time and all updates will be\n"
+"    posted on this page."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/privacy.html:129
+msgid ""
+"If you feel that we are not abiding by this privacy policy, you should\n"
+"    contact us immediately via telephone at +993 62 20 04 93 or via email."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/privacy.html:133
+#: toyetjek/blueprints/page/templates/page/terms.html:232
+msgid "Last updated August 1st 2018"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/service.html:14
+msgid "See details"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/services.html:3
+#: toyetjek/blueprints/page/templates/page/services.html:4
+#: toyetjek/templates/layouts/app.html:28
+msgid "Wedding Services"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/services.html:14
+msgid "See more"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:8
+msgid ""
+"By using the toyetjek.com \"service\", you are agreeing to be bound by "
+"the\n"
+"      following terms and conditions \"terms of service\"."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:12
+msgid ""
+"toyetjek.com, \"web portal\" reserves the right to update and change "
+"these\n"
+"      terms of service without notice."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:16
+msgid ""
+"Violation of any of the terms below may result in the termination of your"
+"\n"
+"      account."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:22
+msgid "Account terms"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:24
+msgid ""
+"You are responsible for maintaining the security of your account and\n"
+"      password. The company cannot and will not be liable for any loss or"
+"\n"
+"      damage from your failure to comply with this security obligation."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:29
+msgid ""
+"You are responsible for all content posted and activity that occurs under"
+"\n"
+"      your account."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:33
+msgid ""
+"You may not use the service for any illegal purpose or to violate any "
+"laws\n"
+"      in your jurisdiction \"including but not limited to copyright "
+"laws\"."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:37
+msgid ""
+"You must provide your legal full name, a valid email address, payment fee"
+" and any other\n"
+"      information requested in order to complete the optional paid "
+"membership\n"
+"      signup process."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:42
+msgid ""
+"Your login may only be used by one person; a single login shared\n"
+"      by multiple people is not permitted. You may create separate logins"
+" for\n"
+"      as many people as you'd like."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:47
+msgid ""
+"You must be a human. Accounts registered by \"bots\" or other automated\n"
+"      methods are not permitted."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:53
+msgid "Payment, refunds, upgrading and downgrading terms"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:55
+msgid ""
+"The service is offered for 365 DTM per year for partners, with an option "
+"to sign up for more\n"
+"      features with specific fees. Once that trial is up, you will only "
+"be able\n"
+"      to continue using that plan's features by paying in advance for "
+"additional\n"
+"      usage. If you fail to pay for additional usage, your account will "
+"be\n"
+"      downgraded until payment is made."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:62
+msgid ""
+"For any upgrade or downgrade in plan level, will result in the new rate\n"
+"      being charged at the next billing cycle. There will be no prorating"
+" for\n"
+"      downgrades in between billing cycles."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:67
+msgid ""
+"Downgrading your service may cause the loss of features or capacity of\n"
+"      your account. The toyetjek.com does not accept any liability for "
+"such loss."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:71
+msgid ""
+"All fees are exclusive of all taxes, levies, or duties imposed by taxing\n"
+"      authorities, and you shall be responsible for payment of all such "
+"taxes,\n"
+"      levies, or duties, taxes."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:75
+msgid "Refunds are processed according to our fair refund policy."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:79
+msgid "Cancellation and termination"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:81
+msgid ""
+"You are solely responsible for properly canceling your account. An email\n"
+"      or phone request to cancel your account is not considered "
+"cancellation.\n"
+"      You can cancel your account at any time by clicking on the Settings"
+"\n"
+"      link\n"
+"      in the global navigation bar at the top of the screen. The Settings"
+"\n"
+"      screen provides a simple no-questions-asked cancellation link."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:89
+msgid ""
+"All of your content will be immediately be inaccessible from the service\n"
+"      upon cancellation. Within 30 days, all this content will be "
+"permanently\n"
+"      deleted from all backups and logs. This information can not be\n"
+"      recovered\n"
+"      once it has been permanently deleted."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:96
+msgid ""
+"If you cancel the service before the end of your current paid up month,\n"
+"      your cancellation will take effect immediately, and you will not be"
+" charged\n"
+"      again. But there will not be any prorating of unused time in the "
+"last\n"
+"      billing cycle."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:102
+msgid ""
+"The company, in its sole discretion, has the right to suspend or\n"
+"      terminate your account and refuse any and all current or future use"
+" of\n"
+"      the service for any reason at any time. Such termination of the "
+"service\n"
+"      will result in the deactivation or deletion of your account or your"
+" access\n"
+"      to your account, and the forfeiture and relinquishment of all "
+"content in\n"
+"      your account. The toyetjek.com reserves the right to refuse service"
+" to anyone\n"
+"      for any reason at any time."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:113
+msgid "Modifications to the service and prices"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:115
+msgid ""
+"The company reserves the right at any time and from time to time to "
+"modify\n"
+"      or discontinue, temporarily or permanently, any part of the service"
+" with\n"
+"      or without notice."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:120
+msgid ""
+"Prices of all services are subject to change upon 30 days notice from\n"
+"      us. Such notice may be provided at any time by posting the changes "
+"to\n"
+"      the company's site or the service itself."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:125
+msgid ""
+"The company shall not be liable to you or to any third party for any\n"
+"      modification, price change, suspension or discontinuance of the "
+"service."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:131
+msgid "Copyright and content ownership"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:133
+msgid ""
+"All content posted on the service must comply with Turkmenistan's "
+"copyright law."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:136
+msgid ""
+"We claim no intellectual property rights over the material you provide\n"
+"      to the service. All materials uploaded remain yours."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:140
+msgid ""
+"The toyetjek.com does not pre-screen content, but reserves the right "
+"\"but not\n"
+"      the obligation\" in their sole discretion to refuse or remove any "
+"content\n"
+"      that is available via the service."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:145
+msgid ""
+"The look and feel of the service is copyright; toyetjek.com, LLC.\n"
+"      All rights reserved. You may not duplicate, copy, or reuse any "
+"portion\n"
+"      of the HTML, CSS, JavaScript, or visual design elements without "
+"express\n"
+"      written permission from the toyetjek.com."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:153
+msgid "General conditions"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:155
+msgid ""
+"Your use of the Service is at your sole risk. The service is provided on\n"
+"      an \"as is\" and \"as available\" basis."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:158
+msgid "Technical support is only provided via email."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:160
+msgid ""
+"You understand that the toyetjek.com uses third party vendors and hosting"
+"\n"
+"      partners to provide the necessary hardware, software, networking,\n"
+"      storage, and related technology required to run the service."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:164
+msgid "You must not modify, adapt or hack the service."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:166
+msgid ""
+"You must not modify another website so as to falsely imply that it is\n"
+"      associated with the service or the company."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:170
+msgid ""
+"You agree not to reproduce, duplicate, copy, sell, resell or exploit any\n"
+"      portion of the service, use of the service, or access to the "
+"service\n"
+"      without the express written permission by the company."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:175
+msgid ""
+"We may, but have no obligation to, remove content and accounts that we\n"
+"      determine in our sole discretion are unlawful or violates any "
+"party's\n"
+"      intellectual property or these terms of service."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:180
+msgid ""
+"Verbal, physical, written or other abuse \"including threats of abuse or\n"
+"      retribution\" of any service customer, company employee or officer "
+"will\n"
+"      result in immediate account termination."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:185
+msgid ""
+"You understand that the technical processing and transmission of the\n"
+"      service, including your content, may be transferred unencrypted and"
+"\n"
+"      involve \"a\" transmissions over various networks; and \"b\" "
+"changes to conform\n"
+"      and adapt to technical requirements of connecting networks or "
+"devices."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:191
+msgid ""
+"The toyetjek.com does not warrant that \"i\" the service will meet your\n"
+"      specific requirements, \"ii\" the service will be uninterrupted, "
+"timely,\n"
+"      secure, or error-free, \"iii\" the results that may be obtained "
+"from the\n"
+"      use of the service will be accurate or reliable, \"iv\" the quality"
+" of any\n"
+"      products, services, information, or other material purchased or "
+"obtained\n"
+"      by you through the service will meet your expectations, and \"v\" "
+"any\n"
+"      errors in the service will be corrected."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:200
+msgid ""
+"You expressly understand and agree that the company shall not be liable\n"
+"      for any direct, indirect, incidental, special, consequential or "
+"exemplary\n"
+"      damages, including but not limited to, damages for loss of profits,"
+"\n"
+"      goodwill, use, data or other intangible losses \"even if the "
+"company has\n"
+"      been advised of the possibility of such damages\", resulting from: "
+"\"i\" the\n"
+"      use or the inability to use the service; \"ii\" the cost of "
+"procurement\n"
+"      of substitute goods and services resulting from any goods, data, "
+"information\n"
+"      or services purchased or obtained or messages received or "
+"transactions\n"
+"      entered into through or from the service; \"iii\" unauthorized "
+"access to\n"
+"      or alteration of your transmissions or data; \"iv\" statements or "
+"conduct of\n"
+"      any third party on the service; \"v\" or any other matter relating "
+"to the\n"
+"      service."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:214
+msgid ""
+"The failure of the company to exercise or enforce any right or provision\n"
+"      of the terms of service shall not constitute a waiver of such right"
+" or\n"
+"      provision. The terms of service constitutes the entire agreement\n"
+"      between you and the company and govern your use of the service, "
+"super-ceding\n"
+"      any prior agreements between you and the company \"including, but "
+"not\n"
+"      limited to, any prior versions of the terms of service\"."
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:222
+msgid "Questions about the terms of service should be sent to"
+msgstr ""
+
+#: toyetjek/blueprints/page/templates/page/terms.html:226
+msgid ""
+"Any new features that augment or enhance the current service, including\n"
+"      the release of new tools and resources, shall be subject to the "
+"terms\n"
+"      of service. Continued use of the service after any such changes "
+"shall\n"
+"      constitute your consent to such changes."
+msgstr ""
+
+#: toyetjek/blueprints/user/forms.py:16 toyetjek/blueprints/user/forms.py:23
+msgid "Username or email"
+msgstr ""
+
+#: toyetjek/blueprints/user/forms.py:31 toyetjek/blueprints/user/forms.py:44
+#: toyetjek/blueprints/user/forms.py:83
+msgid "Password"
+msgstr ""
+
+#: toyetjek/blueprints/user/forms.py:35
+msgid "Company Name or Firstname"
+msgstr ""
+
+#: toyetjek/blueprints/user/forms.py:45
+msgid "Confirm Password"
+msgstr ""
+
+#: toyetjek/blueprints/user/forms.py:46
+msgid "Telephone number"
+msgstr ""
+
+#: toyetjek/blueprints/user/forms.py:49
+msgid "Category"
+msgstr ""
+
+#: toyetjek/blueprints/user/forms.py:57
+msgid "Letters, numbers and underscores only please."
+msgstr ""
+
+#: toyetjek/blueprints/user/forms.py:71
+msgid "Current password"
+msgstr ""
+
+#: toyetjek/blueprints/user/forms.py:86
+msgid "Language preference"
+msgstr ""
+
+#: toyetjek/blueprints/user/models.py:62
+msgid "Wedding service"
+msgstr ""
+
+#: toyetjek/blueprints/user/models.py:63
+msgid "Restaurant"
+msgstr ""
+
+#: toyetjek/blueprints/user/models.py:64
+msgid "Singer"
+msgstr ""
+
+#: toyetjek/blueprints/user/models.py:65
+msgid "DJ"
+msgstr ""
+
+#: toyetjek/blueprints/user/models.py:66
+msgid "Musician"
+msgstr ""
+
+#: toyetjek/blueprints/user/models.py:67
+msgid "Tamada"
+msgstr ""
+
+#: toyetjek/blueprints/user/models.py:68
+msgid "Dancer"
+msgstr ""
+
+#: toyetjek/blueprints/user/models.py:69
+msgid "Decorations"
+msgstr ""
+
+#: toyetjek/blueprints/user/models.py:70
+msgid "Wedding Car"
+msgstr ""
+
+#: toyetjek/blueprints/user/models.py:71
+msgid "Beauty Salon"
+msgstr ""
+
+#: toyetjek/blueprints/user/models.py:72
+msgid "Hair Stylist"
+msgstr ""
+
+#: toyetjek/blueprints/user/models.py:73
+msgid "Wedding House"
+msgstr ""
+
+#: toyetjek/blueprints/user/models.py:74
+msgid "Florists"
+msgstr ""
+
+#: toyetjek/blueprints/user/models.py:75
+msgid "Mens Wear"
+msgstr ""
+
+#: toyetjek/blueprints/user/models.py:76
+msgid "Photographer"
+msgstr ""
+
+#: toyetjek/blueprints/user/models.py:77
+msgid "Videographer"
+msgstr ""
+
+#: toyetjek/blueprints/user/models.py:78
+msgid "Jeweler"
+msgstr ""
+
+#: toyetjek/blueprints/user/models.py:79
+msgid "Artist"
+msgstr ""
+
+#: toyetjek/blueprints/user/models.py:80
+msgid "Cook"
+msgstr ""
+
+#: toyetjek/blueprints/user/models.py:81
+msgid "Kebab Chef"
+msgstr ""
+
+#: toyetjek/blueprints/user/models.py:82
+msgid "Bridal Gifts"
+msgstr ""
+
+#: toyetjek/blueprints/user/models.py:83
+msgid "Small Presents"
+msgstr ""
+
+#: toyetjek/blueprints/user/models.py:84
+msgid "Wedding Beverages"
+msgstr ""
+
+#: toyetjek/blueprints/user/models.py:85
+msgid "Comedian"
+msgstr ""
+
+#: toyetjek/blueprints/user/validations.py:17
+msgid "Unable to locate account."
+msgstr ""
+
+#: toyetjek/blueprints/user/validations.py:31
+msgid "Does not match."
+msgstr ""
+
+#: toyetjek/blueprints/user/views.py:60
+msgid "This account has been disabled."
+msgstr ""
+
+#: toyetjek/blueprints/user/views.py:62
+msgid "Identity or password is incorrect."
+msgstr ""
+
+#: toyetjek/blueprints/user/views.py:70
+msgid "You have been logged out."
+msgstr ""
+
+#: toyetjek/blueprints/user/views.py:82
+msgid "An email has been sent to {0}."
+msgstr ""
+
+#: toyetjek/blueprints/user/views.py:97
+msgid "Your reset token has expired or was tampered with."
+msgstr ""
+
+#: toyetjek/blueprints/user/views.py:106
+msgid "Your password has been reset."
+msgstr ""
+
+#: toyetjek/blueprints/user/views.py:125
+msgid ""
+"Thanks for signing up!, Please visit our office to pay fee and confirm "
+"your account"
+msgstr ""
+
+#: toyetjek/blueprints/user/views.py:140
+msgid "You already picked a username."
+msgstr ""
+
+#: toyetjek/blueprints/user/views.py:149
+msgid "Sign up is complete, enjoy our services."
+msgstr ""
+
+#: toyetjek/blueprints/user/views.py:189
+msgid "Your sign in settings have been updated."
+msgstr ""
+
+#: toyetjek/blueprints/user/views.py:204
+msgid "Your locale settings have been updated."
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/begin_password_reset.html:4
+#: toyetjek/blueprints/user/templates/user/begin_password_reset.html:10
+msgid "Reset your password"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/begin_password_reset.html:12
+msgid "We'll send you an email to reset your password."
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/begin_password_reset.html:22
+#: toyetjek/blueprints/user/templates/user/password_reset.html:18
+msgid "Continue"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/begin_password_reset.html:29
+#: toyetjek/blueprints/user/templates/user/password_reset.html:25
+msgid "Back to login"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/confirm_account.html:4
+msgid "Account Confirmation"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/confirm_account.html:9
+msgid "Your personal Dashboard"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/confirm_account.html:16
+msgid "Track our clients"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/confirm_account.html:24
+msgid "See the number of weddings you organized"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/confirm_account.html:32
+msgid "See your assigned Clients, keep Yourself updated"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/confirm_account.html:40
+msgid "Only 365 DTM per Year!"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/login.html:4
+msgid "Sign in to access your account"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/login.html:10
+msgid "Sign in to continue"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/login.html:25
+msgid "Sign in"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/login.html:40
+msgid "Forgot your password?"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/password_reset.html:4
+#: toyetjek/blueprints/user/templates/user/password_reset.html:10
+msgid "Enter a new password"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/settings.html:3
+msgid "Account settings"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/settings.html:7
+#: toyetjek/templates/layouts/app.html:44
+msgid "Settings"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/settings.html:13
+msgid "Update email and password"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/settings.html:17
+msgid "Update language"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/settings.html:21
+msgid "Your username is"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/settings.html:27
+msgid "Pick a username"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/settings.html:33
+msgid "Clients Served"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/signup.html:4
+msgid "Sign up for a new account"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/signup.html:9
+msgid "What are you waiting for?"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/signup.html:16
+msgid "See who throws wedding"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/signup.html:18
+msgid "Check to see if you can do the job"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/signup.html:27
+msgid "Easily find a job"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/signup.html:29
+msgid "Find Wedding Owners easily"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/signup.html:38
+msgid "We recommend You!"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/signup.html:40
+msgid "Recommendation of your wedding service"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/signup.html:49
+msgid "Only 1 DTM per day"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/signup.html:50
+msgid "Pay once and see who throws weddings"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/signup.html:56
+#: toyetjek/templates/layouts/login.html:12
+msgid "Sign up today"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/signup.html:89
+msgid "Looking to sign in?"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/update_credentials.html:4
+#: toyetjek/blueprints/user/templates/user/update_credentials.html:10
+msgid "Update your sign in information"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/update_credentials.html:12
+msgid "Supply your current password to make any changes."
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/update_credentials.html:28
+#: toyetjek/blueprints/user/templates/user/update_locale.html:18
+msgid "Save"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/update_credentials.html:35
+#: toyetjek/blueprints/user/templates/user/update_locale.html:25
+msgid "Nevermind"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/update_locale.html:4
+msgid "Update your language settings"
+msgstr ""
+
+#: toyetjek/blueprints/user/templates/user/update_locale.html:10
+msgid "Update locale settings"
+msgstr ""
+
+#: toyetjek/templates/layouts/app.html:25
+msgid "Organize Wedding"
+msgstr ""
+
+#: toyetjek/templates/layouts/app.html:31
+msgid "e-Invitations"
+msgstr ""
+
+#: toyetjek/templates/layouts/app.html:34
+#: toyetjek/templates/layouts/app.html:63
+#: toyetjek/templates/layouts/base.html:58
+msgid "Contact"
+msgstr ""
+
+#: toyetjek/templates/layouts/app.html:42
+msgid "Account"
+msgstr ""
+
+#: toyetjek/templates/layouts/app.html:49
+msgid "Log out"
+msgstr ""
+
+#: toyetjek/templates/layouts/app.html:53
+msgid "Log in"
+msgstr ""
+

@@ -1,0 +1,46 @@
+{% extends 'layouts/app.html' %}
+
+{% block body %}
+<div class="row">
+  <div class="col-md-12">
+    <a class="pull-right btn btn-sm btn-info" href="{{ url_for('admin.add_service', id=user.id) }}"><i class="fa fa-fw fa-plus"></i>Add Service</a>
+  </div>
+</div>
+    <table class="table table-striped table-sm table-responsive">
+        <thead>
+          <tr>
+            <th class="col-header">
+              <p>No</p>            
+            </th>
+            <th class="col-header">
+              <p>Description</p>            
+            </th>
+            <th class="col-header">
+              <p>Price</p>
+            </th>
+            <th class="col-header">
+              <p>Actions</p>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for service in service %}
+          <tr>
+            <td>
+              {{ loop.index }}
+            </td>
+            <td>
+              {{ service.description }}
+            </td>
+            <td>
+              {{ service.price }} DTM
+            </td>
+            <td>
+              <a href="{{ url_for('admin.edit_service', id = service.id) }}" class="btn btn-sm btn-warning"><i class="fa fa-fw fa-edit"></i></a>
+              <a href="{{ url_for('admin.delete_service', id = service.id) }}" class="btn btn-sm btn-danger"><i class="fa fa-fw fa-trash"></i></a>
+            </td>
+          </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

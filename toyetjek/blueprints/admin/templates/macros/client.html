@@ -1,0 +1,11 @@
+{% macro role_icon_for(client) -%}
+  {% if client.status == 'pending' %}
+    <i class="fa fa-3x fa-fw fa-pause" title="Pending"></i>
+  {% elif client.status == 'cancelled' %}
+    <i class="fa fa-3x fa-fw fa-ban text-muted" title="Cancelled"></i>
+  {% elif client.status == 'approved' %}
+    <i class="fa fa-3x fa-fw fa-thumbs-up text-muted" title="Approved"></i>
+  {% else %}
+    <i class="fa fa-3x fa-fw fa-check text-muted" title="Done"></i>
+  {% endif %}
+{% endmacro %}

@@ -1,0 +1,17 @@
+DEBUG = False
+
+SERVER_NAME = 'toyetjek.com'
+SECRET_KEY = 'generateastrong128chartoken'
+
+MAIL_USERNAME = 'batyr.ata93@gmail.com'
+MAIL_PASSWORD = 'id#100065673'
+
+CELERY_BROKER_URL = 'redis://:amuchmoresecurepassword@redis:6379/0'
+CELERY_RESULT_BACKEND = 'redis://:amuchmoresecurepassword@redis:6379/0'
+
+db_uri = 'postgresql://toyetjek:themos
+tsecurepasswordevercreated@postgres:5432/toyetjek'
+SQLALCHEMY_DATABASE_URI = db_uri
+
+SEED_ADMIN_EMAIL = 'you@realemailaccount.com'
+SEED_ADMIN_PASSWORD = 'thebestpasswordyouevermade'

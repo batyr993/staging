@@ -1,0 +1,49 @@
+{% extends 'layouts/app.html' %}
+
+{% block title %}{{ _('Account settings') }}{% endblock %}
+{% block body %}
+  <div class="row">
+    <div class="col-md-5">
+      <h2>{{ _('Settings') }}</h2>
+      <h4 class="text-muted margin-bottom">{{ current_user.company_name }}</h4>
+
+      <div class="list-group">
+        <a href="{{ url_for('user.update_credentials') }}"
+           class="list-group-item">
+          {{ _('Update email and password') }}
+        </a>
+        <a href="{{ url_for('user.update_locale') }}"
+           class="list-group-item">
+          {{ _('Update language') }}
+        </a>
+        {% if current_user.username %}
+          <span class="list-group-item quarter-faded text-muted">
+            {{ _('Your username is') }}
+            <strong>{{ current_user.username }}</strong>
+          </span>
+        {% else %}
+          <a href="{{ url_for('user.welcome') }}"
+             class="list-group-item">
+            {{ _('Pick a username') }}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+    <div class="col-md-5 col-md-push-1 col-md-offset-1">
+      <h2>{{ _('Clients Served') }}</h2>
+      <h1 style="font-size: 8.5rem;">{{ current_user.wedding_count }}</h1>
+    </div>
+  </div>
+  <div class="row">
+        <div class="col-md-12">
+          <h2>Your Photos</h2>
+        </div>
+        {% if current_user.username != None %}
+          {% for image in images %}
+          <div class="col-md-3">
+            <img src="{{ url_for('static', filename='images/uploads/' + current_user.username + '/' + image) }}" class="img-thumbnail img-responsive"  width="100%" height="auto">
+          </div>
+          {% endfor%}
+        {% endif %}
+  </div>
+{% endblock %}

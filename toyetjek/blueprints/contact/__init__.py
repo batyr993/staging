@@ -1,0 +1,1 @@
+from toyetjek.blueprints.contact.views import contact

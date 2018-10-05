@@ -1,0 +1,113 @@
+{% extends 'layouts/invitation.html' %}
+{% block body %}
+{% if inv.confirmed == True %}
+	<style type="text/css">
+			*
+			{
+			  margin-top:0;padding:0;  
+			}
+
+			html,body
+			{
+			    height:100%;   
+			}
+			body
+			{
+			   display: table; 
+			   margin: 0 auto;
+			   background-image:url('{{url_for("static", filename="images/invitations/"+inv.image)}}');
+			   background-repeat:no-repeat;
+			   background-size:cover;
+			   background-position: center center;
+			}
+
+			.container
+			{  
+			    height: 100%;
+			    display: table-cell;   
+			    vertical-align: middle;
+			    background-color:rgba(197,76,76,0.3);
+			}
+	</style>
+	<div class="container text-center">
+		<div class="text-center" style="margin-bottom: 10%; color: #fff">
+			<div style="padding: 10px">
+				<h1 style="font-size:6.5rem; font-family: 'Handycheera'">{{ inv.names }}</h1>
+				<h3>{{inv.wedding_quote}}</h3>
+				<h4>{{ _('Date:') }} {{ we_date }}</h4>
+				<h4>{{ _('Time:') }} {{ inv.wedding_time }} </h4>
+			</div>
+		</div>
+		<div class="clock" style="margin:2rem"></div>
+		<div class="message" style="color:#fff; font-size:6.5rem; color: #fff"></div>
+	        <ul class="list-inline">
+	          <li class="list-inline-item text-muted">toyetjek.com &copy; 2018 v.1.0.0. BA Design</li>
+	          <li class="list-inline-item"><a href="{{ url_for('page.home') }}">{{ _('Home') }}</a></li>
+	          <li class="list-inline-item"><a href="{{ url_for('page.privacy') }}">{{ _('Privacy Policy') }}</a></li>
+	          <li class="list-inline-item"><a href="{{ url_for('page.terms') }}">{{ _('Terms of Service') }}</a></li>
+	          <li class="list-inline-item"><a href="{{ url_for('page.faq') }}">FAQ</a></li>
+	          <li class="list-inline-item"><a href="{{ url_for('feedback.index') }}">{{ _('Feedback') }}</a></li>
+	        </ul>
+	</div>
+{% else %}
+<div class="container text-center">
+	<div class="row">
+		<div class="col-md-12 card card-block">
+			<h1>{{ _('Please come to our office to pay the Fee or contact our wedding agent') }}</h1>
+			<img class="img-responsive" width="100%" src="{{url_for('static', filename='images/confirm-payment.jpg')}}">
+			<ul class="list-inline">
+	          <li class="list-inline-item text-muted">toyetjek.com &copy; 2018 v.1.0.0. BA Design</li>
+	          <li class="list-inline-item"><a href="{{ url_for('page.home') }}">{{ _('Home') }}</a></li>
+	          <li class="list-inline-item"><a href="{{ url_for('page.privacy') }}">{{ _('Privacy Policy') }}</a></li>
+	          <li class="list-inline-item"><a href="{{ url_for('page.terms') }}">{{ _('Terms of Service') }}</a></li>
+	          <li class="list-inline-item"><a href="{{ url_for('page.faq') }}">FAQ</a></li>
+	          <li class="list-inline-item"><a href="{{ url_for('feedback.index') }}">{{ _('Feedback') }}</a></li>
+	        </ul>
+		</div>
+	</div>
+</div>
+{% endif %}
+<script type="text/javascript">
+	var clock;
+	var time = '{{ wedding_date }}';
+
+	$(document).ready(function() {
+		var clock;
+
+		// Set dates.
+        var futureDate  = new Date(time);
+        var currentDate = new Date();
+
+        // Calculate the difference in seconds between the future and current date
+        var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+        // Calculate day difference and apply class to .clock for extra digit styling.
+        function dayDiff(first, second) {
+            return (second-first)/(1000*60*60*24);
+        }
+
+        if (dayDiff(currentDate, futureDate) < 100) {
+            $('.clock').addClass('twoDayDigits');
+        } else {
+            $('.clock').addClass('threeDayDigits');
+        }
+
+        if(diff < 0) {
+            diff = 0;
+        }
+
+
+		clock = $('.clock').FlipClock(diff,{
+	        clockFace: 'DailyCounter',
+	        countdown: true,
+	        callbacks: {
+		        	stop: function() {
+		        		$('.clock').hide();
+		        		$('.message').html('Live Happily ever after!');
+		        	}
+		        }
+	    });
+
+	});
+</script>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'layouts/app.html' %}
+{% import 'macros/form.html' as f with context %}
+
+{% block title %}{{ _('Account Confirmation') }}{% endblock %}
+
+{% block body %}
+  <div class="row">
+    <div class="col-md-5">
+      <h2>{{ _('Your personal Dashboard') }}</h2>
+
+      <div class="media lg-margin-bottom">
+        <div class="media-left">
+          <i class="fa fa-fw fa-3x fa-users text-wedding"></i>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">{{ _('Track our clients') }}</h4>
+        </div>
+      </div>
+      <div class="media lg-margin-bottom">
+        <div class="media-left">
+          <i class="fa fa-fw fa-3x fa-area-chart text-wedding"></i>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">{{ _('See the number of weddings you organized') }}</h4>
+        </div>
+      </div>
+      <div class="media lg-margin-bottom">
+        <div class="media-left">
+          <i class="fa fa-fw fa-3x fa-smile-o text-wedding"></i>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">{{ _('See your assigned Clients, keep Yourself updated') }}</h4>
+        </div>
+      </div>
+      <div class="media lg-margin-bottom">
+        <div class="media-left">
+          <i class="fa fa-fw fa-3x fa-shopping-bag text-wedding"></i>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">{{ _('Only 365 DTM per Year!') }}</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-7">
+      <img class="img-responsive" width="100%" src="{{ url_for('static', filename='images/confirmation.jpg')}}">
+    </div>
+  </div>
+{% endblock %}

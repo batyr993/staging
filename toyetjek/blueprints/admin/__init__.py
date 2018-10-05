@@ -1,0 +1,1 @@
+from toyetjek.blueprints.admin.views import admin

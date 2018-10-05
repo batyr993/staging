@@ -1,0 +1,55 @@
+{% extends 'layouts/app.html' %}
+
+{% block title %} Admin - Client / Payments {% endblock %}
+{% block body %}
+{% if payments.total == 0 %}
+    <h3>No payments</h3>
+{% else %}
+<div class="row">
+  <div class="col-md-12">
+    <a class="pull-right btn btn-sm btn-info" href="{{ url_for('admin.client_add_payment', id=client.id) }}"><i class="fa fa-fw fa-plus"></i>Add Payment</a>
+  </div>
+</div>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th class="col-header">
+              <p>No</p>
+            </th>
+            <th class="col-header">
+              <p>Date</p>            
+            </th>
+            <th class="col-header">
+              <p>Reason</p>
+            </th>
+            <th class="col-header">
+              <p>Amount</p>            
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for payment in payments %}
+          <tr>
+            <td>{{ loop.index }}</td>
+            <td>
+              <time class="from-now"
+                    data-datetime="{{ payment.created_on }}">
+              {{ payment.created_on }}
+              </time>
+            </td>
+            <td>
+              {{ payment.reason }}
+            </td>
+            <td>
+              {{ payment.amount }} DTM
+            </td>
+          </tr>
+        {% endfor %}
+        <tr>
+          <td colspan="3"></td>
+          <td><strong>Total Payment: {{ total_payment[0] }} DTM</strong></td>
+        </tr>
+        </tbody>
+      </table>
+  {% endif %}
+{% endblock %}

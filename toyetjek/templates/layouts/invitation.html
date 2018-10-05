@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/flipclock/flipclock.css')}}">
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/vendor/bootstrap.min.css') }}">
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/toyetjek-icon.png') }}">
+  
+  	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='scripts/flipclock/flipclock.js')}}"></script>
+  	<title>{{inv.names}}</title>
+  	</head>
+  	<body>
+  		{% block body %}{% endblock %}
+  	</body>
+  	 <script
+        src="{{ url_for('static', filename='scripts/vendor/bootstrap.min.js') }}">
+     </script>
+     <script 
+        src="{{url_for('static', filename='scripts/vendor/bootstrap.bundle.min.js')}}">
+     </script>
+</html>

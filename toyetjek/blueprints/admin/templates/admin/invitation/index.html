@@ -1,0 +1,124 @@
+{% extends 'layouts/app.html' %}
+{% import 'macros/items.html' as items %}
+{% import 'macros/form.html' as f with context %}
+{% import 'macros/invitation.html' as account %}
+
+{% block title %}Admin - Invitations / List{% endblock %}
+
+{% block body %}
+  {{ f.search('admin.invitations') }}
+
+  {% if invitations.total == 0 %}
+    <h3>No results found</h3>
+
+    {% if request.args.get('q') %}
+      <p>Try limiting or removing your search terms.</p>
+    {% else %}
+      <p>There are no invitations present,
+         you should <a href="{{ url_for('invitation.register') }}">Register</a>.</p>
+    {% endif %}
+  {% else %}
+    {% call f.form_tag('admin.invitations_bulk_delete') %}
+      <table class="table table-striped table-sm table-responsive">
+        <thead>
+          <tr>
+            <th>
+              <label for="select_all"></label>
+              <input id="select_all" name="select_all" type="checkbox">
+            </th>
+            <th class="col-header">
+              {{ items.sort('created_on', 'Registered') }}
+            </th>
+            <th class="col-header">
+              {{ items.sort('region') }}
+            </th>
+            <th class="col-header">
+              {{ items.sort('names') }}
+            </th>
+            <th class="col-header">
+              {{ items.sort('image', 'Photo') }}              
+            </th>
+            <th class="col-header">
+              {{ items.sort('wedding_place', 'Wedding Place') }}
+            </th>
+            <th class="col-header">
+              {{ items.sort('wedding_time', 'Wedding Time') }}
+            </th>
+            <th class="col-header">
+              {{ items.sort('wedding_date', 'Wedding Date') }}
+            </th>
+            <th class="col-header">
+              {{ items.sort('confirm', 'Status') }}
+            </th>
+            <th class="col-header">
+              <p>Actions</p>
+            </th>
+            <th id="bulk_actions" colspan="6">
+              <div class="form-inline">
+                {{ f.field(bulk_form.scope, inline=True) }}
+                  <button type="submit"
+                          class="btn btn-danger btn-sm" style="margin-left:5px">
+                    Delete items
+                  </button>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for inv in invitations.items %}
+          <tr>
+            <td>
+              <label for="bulk_ids"></label>
+              <input class="checkbox-item" id="bulk_ids" name="bulk_ids"
+                     type="checkbox" value="{{ inv.id }}">
+            </td>
+            <td>
+              <time class="from-now"
+                    data-datetime="{{ inv.created_on }}">
+                {{ inv.created_on }}
+              </time>
+            </td>
+            <td>
+                <p class="text-muted">{{ inv.region }}</p>
+            </td>
+            <td>
+              <a href="{{url_for('admin.invitation_edit', id=inv.id)}}">
+                <div class="pull-left">
+                  {{ account.role_icon_for(inv) }}
+                </div>
+                <h6 class="media-heading">{{ inv.names }}</h6>
+              </a>
+            </td>
+            <td>
+              {% if inv.image != None %}
+                <img class="img-thumbnail" height="auto" width="65px" src="{{url_for('static', filename='images/invitations/' + inv.image) }}">
+              {% else %}
+                <p class="text-muted">No Photo</p>
+              {% endif %}
+            </td>
+            <td>
+              <p class="text-muted">{{ inv.wedding_quote }}</p>
+            </td>
+            <td>
+              <p class="text-muted">{{ inv.wedding_time }}</p>
+            </td>
+            <td>
+              <p class="text-muted">{{ inv.wedding_date }}</p>
+            </td>
+            <td>
+              <p class="text-muted">{{ inv.confirmed }}</p>
+            </td>
+            {% if inv.confirmed == True %}
+              <td>
+                <a class="btn btn-small btn-success" href="{{url_for('invitation.einvitation', id=inv.id)}}"><i class="fa fa-fw fa-smile-o"></i></a>
+              </td>
+            {% endif %}
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    {% endcall %}
+
+    {{ items.paginate(invitations) }}
+  {% endif %}
+{% endblock %}

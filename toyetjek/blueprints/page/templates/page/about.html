@@ -1,0 +1,21 @@
+{% extends 'layouts/app.html' %}
+
+{% block title %}{{ _('About') }}{% endblock %}
+{% block body %}
+<div class="row" style="margin-top:-30px">
+  <div class="col-md-12">
+    <img class="img-responsive" width="100%" src="{{url_for('static', filename='images/about.jpg')}}">
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="text-center">{{ _('About us') }}</h2>
+    <p class="text-justify lead">{{ _('toyetjek.com is the') }} <strong>{{ _('1st and the only wedding portal in Turkmenistan.') }}</strong>{{ _('The idea was initially set by') }} <strong>Guwanch Garajayev</strong> {{ _('and') }} <strong>Batyr Atamamedov</strong>, {{ _('the founders of toyetjek.com in November of year 2017. The idea is to simplify the wedding process of couples who have a hard time in organizing and planning a wedding of their dream. Toyetjek.com gathers all the wedding services that are available in Turkmenistan and recommends them to people. Couples can see the wedding services that are available on web portal or they can visit the showroom which is located at the 2nd floor of Berkarar Shopping Center. If couples decide to organize wedding through toyetjek.com we help in finding every single detail which is needed for a modern wedding. We have a team of wedding organizers who are ready to help day and night. They will work with you individually and help with every single detail. Moreover they will teach you the ethics of how to behave in a wedding.') }}</p>
+    <h2 class="text-center"> {{ _('Electronic Invitation') }}</h2>
+    <p class="text-justify lead">{{ _('The idea of electronic invitation was designed by Batyr Atamamedov, e-Invitation contains automatic countdown so that couples can count their days and make their plans accordingly. Couples can also put their countdown in a restaurants, so everyone can see and countdown together for bride and groom to come. e-Invitation can be shared on social networks like') }} <strong>{{ _('facebook, instagram and imo messenger') }}</strong>. {{ _("Nowadays we like to share our best moments. The wedding being one of the most happiest moments of couple's lifes is also a good reason to share happiness. So we encourage you to spread the word about your wedding so that people can save the date.") }}</p>
+    <p class="text-justify">{{ _('We are glad that you are using our service and we will work more to make it better. You can follow us on instagram:') }} <strong>@toyetjek</strong>, {{ _('or you can add us on imo messenger:') }}<strong>+99365200493</strong></p>
+    <p>{{ _('Feel free to contact us anytime!') }}</p>
+  </div>
+</div>
+ 
+{% endblock %}

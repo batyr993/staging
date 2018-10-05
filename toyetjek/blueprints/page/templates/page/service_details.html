@@ -1,0 +1,52 @@
+{% extends 'layouts/app.html' %}
+{% block title %}{{ user.company_name }}{% endblock %}
+{% block heading %}<h2 class="text-center">{{ user.company_name }}</h2>{% endblock %}
+
+{% block body %}
+    <div class="row">
+      <div class="col-md-8">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+              {% for image in images %}
+                  <div class="carousel-item {% if loop.index == 1 %} active {% endif %}">
+                    <img class="d-block w-100" src="{{url_for('static', filename='images/uploads/' + user.username + '/' + image)}}" alt="#">
+                  </div>
+              {% endfor %}
+            </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+          </div>
+      </div>
+      <div class="col-md-4">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#EN">EN</a>
+          </li>
+          <li>
+            <a class="nav-link" data-toggle="tab" href="#RU">RU</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane container active" id="EN" class="tab-pane fade in active">
+              <h3>{{ user.company_name }}</h3>
+              <p>{{ user.description }}</p>
+            </div>
+            <div class="tab-pane container fade" id="RU" class="tab-pane fade">
+              <h3>{{ user.company_name_ru }}</h3>
+              <p>{{ user.description_ru }}</p>
+            </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

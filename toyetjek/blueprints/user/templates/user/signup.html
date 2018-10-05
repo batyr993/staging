@@ -1,0 +1,96 @@
+{% extends 'layouts/app.html' %}
+{% import 'macros/form.html' as f with context %}
+
+{% block title %}{{_('Sign up for a new account') }}{% endblock %}
+
+{% block body %}
+  <div class="row">
+    <div class="col-md-5">
+      <h2>{{ _('What are you waiting for?') }}</h2>
+
+      <div class="media lg-margin-bottom">
+        <div class="media-left">
+          <i class="fa fa-fw fa-3x fa-calendar text-wedding"></i>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">{{ _('See who throws wedding') }}</h4>
+          <span class="text-muted">
+            {{ _('Check to see if you can do the job') }}
+          </span>
+        </div>
+      </div>
+      <div class="media lg-margin-bottom">
+        <div class="media-left">
+          <i class="fa fa-fw fa-3x fa-users text-wedding"></i>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">{{ _('Easily find a job') }}</h4>
+          <span class="text-muted">
+            {{ _('Find Wedding Owners easily') }}
+          </span>
+        </div>
+      </div>
+      <div class="media lg-margin-bottom">
+        <div class="media-left">
+          <i class="fa fa-fw fa-3x fa-thumbs-up text-wedding"></i>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">{{ _('We recommend You!') }}</h4>
+          <span class="text-muted">
+            {{ _('Recommendation of your wedding service') }}
+          </span>
+        </div>
+      </div>
+      <div class="media lg-margin-bottom">
+        <div class="media-left">
+          <i class="fa fa-fw fa-3x fa-check text-wedding"></i>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">{{ _('Only 1 DTM per day') }}</h4>
+          <span class="text-muted">{{ _('Pay once and see who throws weddings') }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5 col-md-push-1 col-md-offset-1 card card-block">
+      {% call f.form_tag('user.signup') %}
+        <legend>{{ _('Sign up today') }}</legend>
+          {% call f.form_group(form.region, css_class='sm-margin-bottom') %} 
+          {% endcall %}
+          {% call f.form_group(form.company_name, css_class='sm-margin-bottom',
+                               autofocus='autofocus',
+                               placeholder='Aygytly adim, KAVideo, etc..') %}
+          {% endcall %}
+          {% call f.form_group(form.category, css_class='sm-margin-bottom') %}
+          {% endcall %}
+      
+          {% call f.form_group(form.telephone, placeholder='+993') %} {% endcall %}
+        
+          {% call f.form_group(form.email, css_class='sm-margin-bottom',
+                               autofocus='autofocus',
+                               placeholder='Email address') %}
+          {% endcall %}
+
+          {% call f.form_group(form.password, css_class='sm-margin-bottom') %}
+          {% endcall %}
+
+          {% call f.form_group(form.confirm_password, css_class='sm-margin-bottom') %}
+          {% endcall %}
+       
+        <div class="row">
+          <div class="col-md-6">
+            <button type="submit" class="btn btn-primary btn-block">
+              {{ _('Register') }}
+            </button>
+          </div>
+          <div class="col-md-6">
+            <div class="visible-xs visible-sm"></div>
+            <a href="{{ url_for('user.login') }}"
+               class="btn btn-default btn-block">
+              {{ _('Looking to sign in?') }}
+            </a>
+          </div>
+        </div>
+      {% endcall %}
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,76 @@
+{% import 'macros/form.html' as f with context %}
+
+{% if request.endpoint.endswith('new') %}
+  {% set endpoint = 'admin.invitation_new' %}
+  {% set form_kwargs = {} %}
+  {% set legend = 'Add a new invitation' %}
+  {% set button = 'Add' %}
+{% else %}
+  {% set endpoint = 'admin.invitation_edit' %}
+  {% set form_kwargs = {'id': inv.id} %}
+  {% set legend = 'Update the Invitation' %}
+  {% set button = 'Save' %}
+{% endif %}
+
+<div class="row">
+  <div class="col-md-6">
+    <h2>{{ legend }}</h2>
+  </div>
+  <div class="col-md-6">
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8 card card-block">
+    {% call f.form_tag(endpoint, **form_kwargs) %}
+      {% call f.form_group(form.region, css_class='sm-margin-bottom') %}
+      {% endcall %}
+      
+      {% call f.form_group(form.names, css_class='sm-margin-bottom',
+                            autofocus='autofocus') %}
+      {% endcall %}
+
+      {% call f.form_group(form.telephone, css_class='sm-margin-bottom') %}
+      {% endcall %}
+
+      {% call f.form_group(form.wedding_quote, css_class='sm-margin-bottom') %}
+      {% endcall %}
+
+      {% call f.form_group(form.wedding_time, css_class='sm-margin-bottom') %}
+      {% endcall %}
+
+      {% call f.form_group(form.wedding_date, css_class='sm-margin-bottom') %}
+      {% endcall %}
+
+      {% call f.form_group(form.payment, css_class='sm-margin-bottom') %}
+      {% endcall %}
+
+      {% call f.form_group(form.photo, css_class='sm-margin-bottom') %}
+      {% endcall %}
+
+      {% call f.form_group(form.confirmed) %}
+      {% endcall %}
+      <hr/>
+      <div class="row" style="margin-bottom: 10px">
+        <div class="col-md-6">
+          <button type="submit" class="btn btn-success btn-block">
+            {{ button }}
+          </button>
+        </div>
+        <div class="col-md-6">
+          <div class="visible-xs visible-sm"></div>
+          <a href="{{ url_for('admin.invitations') }}"
+              class="btn btn-warning btn-block">
+            Cancel
+          </a>
+        </div>
+      </div>
+    {% endcall %}
+  </div>
+  <div class="col-md-4 card card-block">
+    {% if inv.image != None %}
+      <img class="img-responsive, img-thumbnail" width="100%" src="{{url_for('static', filename='images/invitations/'+inv.image)}}">
+      <a class="btn btn-danger" href="{{url_for('admin.delete_invitation_image', id=inv.id)}}"><i class="fa fa-fw fa-trash"></i></a>
+    {% endif %}
+  </div>
+  </div>
+</div>

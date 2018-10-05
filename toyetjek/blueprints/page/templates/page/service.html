@@ -1,0 +1,20 @@
+{% extends 'layouts/app.html' %}
+
+{% block title %}{{ cname }}{% endblock %}
+{% block heading %}<h2 class="text-center">{{ cname }}</h2><hr>{% endblock %}
+
+{% block body %}
+    <div class="row">
+      {% for user in users %}
+      <div class="col-lg-3 col-md-4 col-sm-6" style="margin-bottom:30px">
+        <div class="card">
+          <img class="card-img-top img-responsive" src="{{ url_for('static', filename='images/uploads/' + user.username + '/' + user.image_name)}}" alt="{{ user.image_name }}">
+          <div class="card-body">
+            <h4 class="card-title">{{ user.company_name }}</h4>
+            <a href="{{url_for('page.service_details', id=user.id)}}" class="btn btn-info">{{ _('See details') }}</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+{% endblock %}

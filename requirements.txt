@@ -1,0 +1,35 @@
+Flask==1.0.*
+
+# Application server for both development and production.
+gunicorn==19.8.*
+
+# Testing and static analysis.
+pytest==3.5.*
+pytest-cov==2.5.*
+flake8==3.5.*
+
+# Asset management
+flask-webpack==0.0.2
+
+# Data and workers.
+psycopg2==2.7.*
+Flask-SQLAlchemy==2.3.*
+alembic==0.9.9
+redis==2.10.*
+celery==4.1.*
+
+# Forms.
+Flask-WTF==0.14.*
+WTForms-Components==0.9.*
+
+# Utils.
+fake-factory==0.7.*
+
+# Extensions.
+flask-debugtoolbar==0.10.*
+Flask-Mail==0.9.*
+Flask-Login==0.4.*
+Flask-Babel==0.11.*
+
+
+

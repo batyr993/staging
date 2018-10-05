@@ -1,0 +1,56 @@
+{% extends 'layouts/app.html' %}
+{% import 'macros/form.html' as f with context %}
+
+{% block title %} Register {% endblock%}
+{% block body %}
+<div class="row">
+	<div class="col-md-6">
+      <h2>{{ _('Share your wedding with the World!') }}</h2>
+
+      <div class="media sm-margin-bottom">
+        <div class="media-left">
+          <i class="fa fa-fw fa-3x fa-share-alt text-wedding"></i>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">{{ _('Share your e-invitation on social networks') }}</h4>
+          <span class="text-muted">
+            {{ _('Let your friends see your wedding date') }}
+          </span>
+        </div>
+      </div>
+     {% call f.form_tag('invitation.register') %}
+        <legend>{{ _('Register for an e-Invitation') }}</legend>
+
+        {% call f.form_group(form.region, css_class='sm-margin-bottom') %}
+        {% endcall %}
+        
+        {% call f.form_group(form.names, css_class='sm-margin-bottom',
+                             autofocus='autofocus', placeholder='Batyr & Humaý') %}
+        {% endcall %}
+
+        {% call f.form_group(form.telephone, css_class='sm-margin-bottom', placeholder='+993') %}
+        {% endcall %}
+
+        {% call f.form_group(form.wedding_quote, css_class='sm-margin-bottom', placeholder='Güneş restoranyna bagt-durmuş toýumyza çagyrýarys') %}
+        {% endcall %}
+
+        {% call f.form_group(form.wedding_time, css_class='sm-margin-bottom', placeholder='18:00') %}
+        {% endcall %}
+
+        {% call f.form_group(form.wedding_date, css_class='sm-margin-bottom') %}
+        {% endcall %}
+
+        <div class="row">
+          <div class="col-md-12">
+            <button type="submit" class="btn btn-success btn-block btn-lg">
+              {{ _('Place an Order') }}
+            </button>
+          </div>
+        </div>
+      {% endcall %}
+    </div>
+	<div class="col-md-6 text-center">
+		<img class="img-responsive" width="100%" src="{{url_for('static', filename='images/einv.png')}}">
+	</div>
+</div>
+{% endblock %}
