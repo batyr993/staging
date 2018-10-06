@@ -1,6 +1,6 @@
 DEBUG = False
 
-SERVER_NAME = 'toyetjek.com'
+#SERVER_NAME = 'toyetjek.com'
 SECRET_KEY = 'generateastrong128chartoken'
 
 MAIL_USERNAME = 'batyr.ata93@gmail.com'

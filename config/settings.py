@@ -1,10 +1,11 @@
 from datetime import timedelta
 import os
 
-DEBUG = False
-LOG_LEVEL = 'DEBUG'  # CRITICAL / ERROR / WARNING / INFO / DEBUG
+DEBUG = True
+TESTING = True
+#LOG_LEVEL = 'DEBUG'  # CRITICAL / ERROR / WARNING / INFO / DEBUG
 
-SERVER_NAME = 'localhost:8001'
+#SERVER_NAME = '142.93.223.183'
 SECRET_KEY = 'firstweddingportalofturkmenistan'
 
 # Flask-Mail.

@@ -12,4 +12,6 @@ RUN pip install -r requirements.txt
 COPY . .
 RUN pip install --editable .
 
+VOLUMES ["static"]
+
 CMD gunicorn -c "python:config.gunicorn" "toyetjek.app:create_app()"

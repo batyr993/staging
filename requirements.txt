@@ -8,9 +8,6 @@ pytest==3.5.*
 pytest-cov==2.5.*
 flake8==3.5.*
 
-# Asset management
-flask-webpack==0.0.2
-
 # Data and workers.
 psycopg2==2.7.*
 Flask-SQLAlchemy==2.3.*
