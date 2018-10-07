@@ -18,7 +18,7 @@ services:
     ports:
       - '6379:6379'
 
-  website:
+  toyetjek:
     build: .
     command: >
       gunicorn -c "python:config.gunicorn" --reload "toyetjek.app:create_app()"
