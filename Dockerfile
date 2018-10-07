@@ -4,7 +4,10 @@ LABEL maintainer="Batyr Atamamedov <batyr.ata93@gmail.com>"
 RUN apt-get update && apt-get install -qq -y \
   build-essential libpq-dev --no-install-recommends
 
-WORKDIR /app
+WENV INSTALL_PATH /toyetjek
+RUN mkdir -p $INSTALL_PATH
+
+WORKDIR $INSTALL_PATH
 
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
