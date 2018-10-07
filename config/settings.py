@@ -5,7 +5,7 @@ DEBUG = True
 TESTING = True
 #LOG_LEVEL = 'DEBUG'  # CRITICAL / ERROR / WARNING / INFO / DEBUG
 
-#SERVER_NAME = '142.93.223.183'
+SERVER_NAME = '178.62.243.103:8001'
 SECRET_KEY = 'firstweddingportalofturkmenistan'
 
 # Flask-Mail.
